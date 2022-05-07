@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #1e1f24;
+    --secondary-color: #ff9365;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200 !important;
+    letter-spacing: .1rem;
+}
+
+h1, h2 {
+    font-weight: 700 !important;
+}
+
+#hero {
+    position: relative;
+}
+
+.bg-dark {
+    background-color: var(--primary-color) !important;
+
+}
+
+.logo {
+    min-width: 160px;
+    max-width: 180px;
+}
+
+a {
+    color: rgba(256, 256, 256, .2) ;
+}
+
+a:hover {
+    color: rgba(256, 256, 256, .5) ;
+
+}
+
+.navbar {
+    min-height: 100px;
+    
+
+
+}
+
+.nav-link {
+    color: rgba(256, 256, 256, .2) ;
+
+}
+.content{
+    margin-top: 3rem;
+    padding: 2rem;
+
+    
+}
+
+.left-border{
+    border-left: 7px solid rgba(256, 256, 256, .2) ;;
+    padding: 0,5rem;
+
+}
+.lest-list-unstyled{
+    margin-top: 8rem;
+    padding: 4rem;
+
+
+}
+
+.active {
+    color: var(--secondary-color);
+}
+.active:hover {
+    color: var(--secondary-color);
+}
+.lead{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.carousel-inner{
+    max-height: 100vh;
+    max-width: 1000vh;
+}
