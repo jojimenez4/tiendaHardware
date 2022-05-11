@@ -83,35 +83,3 @@ a:hover {
     max-height: 100vh;
     max-width: 1000vh;
 }
-.overlayone-radius{ /* Propiedades de imagen */
-    margin:0px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    padding: 0px;
-    width: 468px;
-    height: 150px;
-    display: inline-block;
-    position: relative;
-    }
-    .overlayinn-radius{ /* Propiedades de la transparencia */
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0px 1px; 
-    width: 150px; /* ancho del contenedor de texto */
-    height: 150px; /* alto del contenedor de texto */
-    border-radius: 150px; /* Tamaño del circulo */
-    opacity: 0; /* esta condicion mantiene el texto oculto */
-    top: 25px; /*distancia hacia abajo*/
-    left: 150px; /*distancia hacia la derecha*/
-    position: absolute;
-    padding: 20px; /* espacio entre texto y bordes */
-    transition: opacity .5s;
-    text-align: center; /* texto centrado */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px; /* tamaño de letra */
-    color:#ffffff; /* color de texto */
-    }
-    .overlayinn-radius:hover { /* Efecto al pasar el mouse */
-    opacity: 1;
-    transition: opacity .5s;
-    }
