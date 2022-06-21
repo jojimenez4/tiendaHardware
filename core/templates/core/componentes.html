@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'core/css/sweetalert2.min.css' %}">  
+
+    <title>Carrito Compras en JavaScript</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="index.html">GAMERS INICIO</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">Lista de Productos</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="row" style="padding: 10px 0;">
+                        <div class="col-12">
+                            <div class="row">
+                                {% for producto in productos %}
+                                <div class="col-6">
+                                    <div class="card" style="height: 10rem; width: 23rem; margin: 5px 0px;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{producto.nombre}}</h5>
+                                            <p class="card-text">{{producto.categoria}}</p>
+                                            <p class="card-text">{{producto.precio}}</p>
+                                            <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    {% include "carrito.html" %}
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
