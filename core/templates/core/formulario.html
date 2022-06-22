@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+{% load static %}	
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Validación de Formulario con Javascript</title>
-    <link rel="icon" href="IMG/LOGO.png">
+    <link rel="icon" href="{% static 'core/img/LOGO.png' %}">
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="css/formulario.css">
+	<link rel="stylesheet" href="{% static 'core/css/formulario.css' %}">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
+	<title>PC GAMERS!</title>
 </head>
 <body>
 	<main>
@@ -61,7 +61,7 @@
 			<div  class="formulario__grupo" id="grupo__terminos">
 				<label class="formulario__label">
 					<input  class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" >
-					Acepto los <a href="terminos.html"  >Terminos y Condiciones</a>
+					Acepto los <a href="{% url 'terminos' %}"  >Terminos y Condiciones</a>
 				</label>
 			</div>
 
@@ -70,14 +70,14 @@
 			</div>
 
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn">Enviar</button> 	<a href="index.html">INICIO</a>
+				<button type="submit" class="formulario__btn">Enviar</button> 	<a href="{% url 'home' %}">INICIO</a>
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
 		
 		</form>
 	</main>
 
-	<script src="js/formulario.js"></script>
+	<script src="{% static 'core/js/formulario.js' %}"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

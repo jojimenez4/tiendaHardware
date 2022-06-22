@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 {% load static %}
 <head>
     <meta charset="UTF-8">
@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'core/css/sweetalert2.min.css' %}">  
 
-    <title>Carrito Compras en JavaScript</title>
+    <title>PC GAMERS!</title>
 </head>
 
 <body>
-
+<!-- deberia de funcionar bien con solo tener instalado django -->
     <header>
         <div class="container">
             <div class="row align-items-stretch justify-content-between">
                 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                    <a class="navbar-brand" href="index.html">GAMERS INICIO</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">GAMERS INICIO</a>
                 </nav>
             </div>
         </div>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    {% include "carrito.html" %}
+                    {% include "core/carrito.html" %}
                 </div>
             </div>
         </div>
