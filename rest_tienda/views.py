@@ -31,7 +31,7 @@ def detalle_productos(request, id):
     GET, UPDATE O DELETE de un producto en especifico
     """
     try:
-        producto = Producto.objects.get(idproducto = id)
+        producto = Producto.objects.get(id=id)
     except Producto.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
     if request.method == 'GET':
