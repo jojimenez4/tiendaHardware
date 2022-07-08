@@ -20,8 +20,8 @@ def terminos(request):
 def ubicacion(request):
     return render(request, 'core/ubicacion.html')
 
-def pago(request):
-    return render(request, 'core/pago.html')
+def productos(request):
+    return render(request, 'core/productos.html')
 
 def agregar_producto(request, producto_id):
     carrito = Carrito(request)
