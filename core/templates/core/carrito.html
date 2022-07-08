@@ -1,3 +1,4 @@
+{% load humanize %}
 <div class="alert alert-primary" role="alert">
     <table class="table table-bordered">
       <thead>
@@ -15,7 +16,7 @@
       {% for key, value in request.session.carrito.items %}
         <tr>
           <td>{{value.nombre}}</td>
-          <td>${{value.acumulado}}</td>
+          <td>${{value.acumulado|intcomma}}</td>
           <td>{{value.cantidad}}
             <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a>
             <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
@@ -31,7 +32,7 @@
       {% endif %}
         <tr>
           <th scope="row">Total:</th>
-          <td colspan="2">${{total_carrito}}</td>
+          <td colspan="2">${{total_carrito|intcomma}}</td>
         </tr>
       </tbody>
     </table>
@@ -39,4 +40,5 @@
     </div>
     <div class="row text-center">
         <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger">Limpiar</a></div>
+        <div class="col-6"><a href="{% url 'pago' %}" class="btn btn-primary">Pagar</a></div>
     </div>

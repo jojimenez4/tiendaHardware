@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 
 # Create your models here.
@@ -5,6 +6,7 @@ from django.db import models
 class Producto(models.Model):
     nombre = models.CharField(max_length=64)
     categoria = models.CharField(max_length=32)
+    foto = models.ImageField(upload_to='images/', null=True, blank=True)
     precio = models.IntegerField()
 
     def __str__(self):

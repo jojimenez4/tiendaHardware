@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+{% load humanize %}
 {% load static %}
 <head>
     <meta charset="UTF-8">
@@ -36,10 +37,11 @@
                                 {% for producto in productos %}
                                 <div class="col-6">
                                     <div class="card" style="height: 10rem; width: 23rem; margin: 5px 0px;">
+                                        <img src="{{producto.foto.url}}" class="card-img-top" width="300px" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title">{{producto.nombre}}</h5>
                                             <p class="card-text">{{producto.categoria}}</p>
-                                            <p class="card-text">{{producto.precio}}</p>
+                                            <p class="card-text">${{producto.precio|intcomma}}</p>
                                             <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
                                         </div>
                                     </div>
