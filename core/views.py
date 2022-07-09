@@ -1,4 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
+
+from core.forms import ProductoForm
 from .Carrito import Carrito
 from .models import Producto
 
@@ -45,5 +47,16 @@ def limpiar_carrito(request):
     carrito = Carrito(request)
     carrito.limpiar()
     return redirect("productos")
+
+def form_producto(request):
+    datos = {
+        'form' : ProductoForm()
+    }
+    if request.method == 'POST':
+        formulario = ProductoForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Guardado correctamente"
+    return render(request, 'core/form_producto.html', datos)
 
 
