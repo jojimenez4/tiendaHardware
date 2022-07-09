@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #1e1f24;
-    --secondary-color: #ff9365;
+    --primary-color: #000000;
+    --secondary-color: #3cff00;
     --white: #ffffff;
 }
 
@@ -31,11 +31,11 @@ h1, h2 {
 }
 
 a {
-    color: rgba(256, 256, 256, .2) ;
+    color:aliceblue ;
 }
 
 a:hover {
-    color: rgba(256, 256, 256, .5) ;
+    color:aliceblue ;
 
 }
 
@@ -47,7 +47,7 @@ a:hover {
 }
 
 .nav-link {
-    color: rgba(256, 256, 256, .2) ;
+    color:aliceblue ;
 
 }
 .content{
